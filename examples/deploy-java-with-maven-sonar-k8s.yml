@@ -1,4 +1,4 @@
-name: End to End CI/CD workflow for Java Applicaton with Maven, Sonar and k8s Intergation
+name: End to End CI/CD workflow for Java Applicaton with Maven, Sonar and K8s Intergation
 
 on:
   push:
@@ -28,9 +28,9 @@ jobs:
     - name: Perform analysis on Sonar Qube
       uses: sonarsource/sonarcloud-github-action@v1
       with:
-        sonarcloud.organization: <name of your org>
-        sonarcloud.projectKey: <key>
-        sonarcloud.projectName: <name>
+        sonarcloud.organization: myorganization    # <name of your org>
+        sonarcloud.projectKey: KJGLBDS        #<key>
+        sonarcloud.projectName: myproject         #<name>
         sonarcloud.token: ${{ env.SONAR_TKN }}
         sonarcloud.scannerVersion: "4.2.0.1873"
 
